@@ -1,6 +1,3 @@
-
-
-
 let table;
 let data = [];
 
@@ -17,8 +14,6 @@ function tidyData() {
 function setup() {
     tidyData();
     createCanvas(500, 500)
-
-
 }
 
 function draw() {
