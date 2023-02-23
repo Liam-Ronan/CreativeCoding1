@@ -10,7 +10,7 @@ class BarChart{
         this.margin = 10;
         this.gap = 10;
         this.numBlocks = this.data.length
-        this.barWidth = (this.width - (this.margin * 2) - ((this.numBlocks - 1)* this.gap)) / this.data.length;
+        this.barWidth = (this.width - (this.margin * 2) - ((this.numBlocks - 1) * this.gap)) / this.data.length;
         this.masterGap = this.barWidth + this.gap;
     }
 
@@ -38,9 +38,9 @@ class BarChart{
     drawBars() {
         push()
         translate(this.margin,0)
-        fill(255,0,0)
+        fill(255,100,0)
         for(let i=0; i < this.data.length; i++) {
-            rect(i*this.masterGap,0, this.barWidth, - this.data[i])
+            rect(i*this.masterGap,0, this.barWidth, -this.data[i])
         }
         pop()
     }
