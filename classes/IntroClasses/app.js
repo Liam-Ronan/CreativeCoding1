@@ -8,8 +8,6 @@ function setup() {
     rectMode(CORNER);
 
     charts.push(new BarChart(400,400,50,450,fruits));
-
-    
 }
 
 function draw() {
