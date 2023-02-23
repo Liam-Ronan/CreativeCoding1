@@ -5,5 +5,19 @@ class BarChart {
         this.width = _width;
         this.posX = _posX;
         this.posY = _posY;
+
+
+    }
+
+    render() {
+
+    }
+
+    scaler() {
+
+    }
+
+    drawBars() {
+        
     }
 }

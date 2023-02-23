@@ -5,13 +5,18 @@ class BarChart{
         this.width = _width;
         this.posX = _posX;
         this.posY = _posY;
-        this.data = _data;     
+        this.data = _data;
+        
+        this.numTicks = 
+        this.tickLength =      
 
         this.margin = 10;
         this.gap = 10;
         this.numBlocks = this.data.length
         this.barWidth = (this.width - (this.margin * 2) - ((this.numBlocks - 1) * this.gap)) / this.data.length;
         this.masterGap = this.barWidth + this.gap;
+
+
     }
 
     render() {

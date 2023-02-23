@@ -2,7 +2,7 @@ let table;
 let data = [];
 
 function preload() {
-    table = loadTable('data/data.csv', 'csv', 'header');
+    table = loadTable('data/HSPAB17.20230221T140245.csv', 'csv', 'header');
   }
 
 function tidyData() {
