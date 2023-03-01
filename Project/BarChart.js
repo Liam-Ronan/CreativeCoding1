@@ -7,8 +7,8 @@ class BarChart {
         this.posX = _posX;
         this.posY = _posY;
         this.data = _data;
-        this.numTicks = 10;
-        this.maxNum = this.calculateMax()
+        this.numTicks = 9;
+        this.maxNum = this.calculateMax();
     }
 
     render() {
@@ -33,11 +33,10 @@ class BarChart {
 
         for(let y = 1; y < this.numTicks + 1; y++) {
             let ySpace = -this.chartHeight / this.numTicks;
-
             stroke(255)
             line(0, ySpace * y, -10, ySpace * y);
 
-            let unitSpace = this.maxNum / this.numTicks
+            let unitSpace = (this.maxNum / this.numTicks).toFixed();
             noStroke();
             fill(255);
             textSize(15);
@@ -47,16 +46,18 @@ class BarChart {
     }
 
     calculateMax() {
+        console.log(data.rows[0].obj.Total);
+        console.log(data.getRowCount());
+
         let max = 0;
-
         for(let x = 0; x < this.data.getRowCount(); x++) {
-            if(data.rows[x].obj.Total > max) {
-                max = int(data.rows[x].obj.Total);
+            if(this.data.rows[x].obj.Total) {
+                max = this.data.rows[x].obj.Total
             }
+            console.log(max);
         }
-        //Checking to see if the max value of the data is returned
-        console.log(max);
         return max;
-
+        /* console.log(max); */
     }
+
 }
