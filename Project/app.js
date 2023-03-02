@@ -9,7 +9,7 @@ function setup() {
     createCanvas(800, 800);
     background(0);
     pixelDensity()
-    chart = new BarChart(400,400, "hello", 250,450, data);
+    chart = new BarChart(400,400, "hello", 250,550, data);
 }
 
 function draw() {
